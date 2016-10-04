@@ -1,0 +1,24 @@
+﻿<Window x:Class="Snake.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Snake" Height="319.403" Width="500" ResizeMode="NoResize" Icon="Resources/snake.ico">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/SimpleGreen.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.ColumnSpan="2" Content="PAUSE" HorizontalAlignment="Left" Height="31" Margin="340,8,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource PauseStil}" Click="Button_Click" FontWeight="Bold" FontFamily="Showcard Gothic">
+            
+        </Button>
+        <Label Name="labelScore" Grid.ColumnSpan="2" Content="SCORE: 0" HorizontalAlignment="Left" Height="26" Margin="82,8,0,0" VerticalAlignment="Top" Width="105" FontWeight="Bold" FontSize="14" FontFamily="Showcard Gothic"/>
+        <Canvas x:Name="paintCanvas" 
+        	Grid.Column="1" HorizontalAlignment="Stretch" MaxWidth="500" MaxHeight="400" Margin="50,50,50,10" RenderTransformOrigin="0.495,0.508">
+            <Canvas.Background>
+                <ImageBrush ImageSource="Resources/SimpleGreenDio.jpg"/>
+            </Canvas.Background>
+        </Canvas>
+    </Grid>
+</Window>
